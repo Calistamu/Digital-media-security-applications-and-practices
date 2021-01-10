@@ -1,6 +1,8 @@
 # Digital-media-security-applications-and-practices
 大四数字媒体安全应用与实践课程实践作业----flask教程
 
+>code是教师代码基础上更改后的代码
+
 ```
 # 如果没有安装过 pipenv，请执行以下一条命令完成 pipenv 安装
 pip install pipenv
@@ -115,12 +117,31 @@ pip install flask_migrate
 ![](images/0x09-10.png)
 再次查看新的数据库，发现创建表成功。  
 ![](images/0x09-9.png)
-6.
+6. 更改application.py增加用户信息.
+* 参考[sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.login](https://stackoverflow.com/questions/39288538/sqlalchemy-exc-integrityerror-sqlite3-integrityerror-unique-constraint-failed)j解决'sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email'
+
+如下图所示：     
+![](images/0x09-15.png)   
+* 错误设置：  
+![](images/0x09-12.png)   
+这样会导致密码没有进行加盐运算
+
+运行后再看数据库中确实多了一行用户信息。  
+![](images/0x09-13.png)  
+7. 使用sender.py和receiver.py
 ```
 pip install bs4
 pip install opencv-python
 pip install pathlib
 ```
+在sender.py中增加信息。  
+![](images/0x09-11.png)
+运行sender.py以后看到同目录文件夹下多了embed.jpg
+![](images/0x09-14.png)  
+看到0x09/instance/upload文件夹下（服务器端）多了图片
+![](images/0x09-16.png) 
+8. 运行receiver.py,输出水印的文本："hello,world!"  
+![](images/0x09-17.png)
 ## 参考文献
 [learn_flask_the_hard_way)](https://github.com/anjingcuc/learn_flask_the_hard_way)  
 [covert_communication](https://github.com/anjingcuc/covert_communication)  
