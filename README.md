@@ -142,6 +142,10 @@ pip install pathlib
 ![](images/0x09-16.png) 
 8. 运行receiver.py,输出水印的文本："hello,world!"  
 ![](images/0x09-17.png)
+* 由于posts是个三维数组，因此更改receiver.py的代码，如下图所示：  
+![](images/0x09-18.png)  
+再执行就能下载所有的图片
+![](images/0x09-19.png)
 ## 参考文献
 [learn_flask_the_hard_way)](https://github.com/anjingcuc/learn_flask_the_hard_way)  
 [covert_communication](https://github.com/anjingcuc/covert_communication)  
